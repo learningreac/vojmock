@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Carousel from './components/Carousel';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id='header' className='w-100'>
+        <Header />
+      </div>
+      <div id='content'>
+        <Carousel />
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-md-8 bg-primary'> content 1</div>
+            <div className='col-md-4'> content 2</div>
+          </div>
+        </div>
+      </div>
+
+      <div id='footer'>
+        <div className='container bg-secondary-subtle'>
+          footer
+        </div>
+      </div>
     </div>
   );
 }
